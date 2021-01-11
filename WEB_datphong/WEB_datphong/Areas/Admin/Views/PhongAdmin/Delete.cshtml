@@ -1,0 +1,92 @@
+﻿@model HotelConection.PHONG
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_MainLayoutAdmin.cshtml";
+}
+
+<script src="~/Areas/AssetAdmin/PreviewRoom/PreviewFile.js"></script>
+<style>
+    input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+    .divdiv {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 10px 50px;
+        width: 45%;
+        margin: auto;
+        display: inline-block;
+    }
+</style>
+<body>
+
+    <h1 style="padding:20px">Xóa Phòng</h1>
+
+    <div class="divdiv">
+        @using (Html.BeginForm("Delete", "PhongAdmin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+
+            <label for="fname">Mã Phòng</label>
+            <input type="text" id="fname" name="MaPhong" placeholder=" Nhập mã.." required value="@Model.MaPhong" readonly>
+
+            <label for="lname">Tên Phòng</label>
+            <input type="text" id="lname" name="TenPhong" placeholder="Tên Phòng.." required value="@Model.TenPhong" readonly>
+            @*<label for="lname">Tên loại phòng</label>*@
+            @*@Html.DropDownList("MaLoaiPhong");*@
+            @*<input type="text" id="lname" name="MaLoaiPhong" placeholder="Mã Loại Phòng.." required>*@
+            @*<label for="lname">Tên Khách sạn</label>*@
+            @*@Html.DropDownList("MaKhachSan");*@
+            @*<input type="text" id="lname" name="MaKhachSan" placeholder="Mã Khách Sạn.." required>*@
+
+
+            @*<label for="lname">Hình Ảnh</label>
+                <input type="file" id="file_hinh" name="HinhChinh" onchange="loadFile(event);" placeholder=""><br>
+                <label for="lname">Hình nhỏ 1</label>
+                <input type="file" id="file_hinh1" name="Hinh1" placeholder=""><br>
+                <label for="lname">Hình nhỏ 2</label>
+                <input type="file" id="file_hinh2" name="Hinh2" placeholder="">*@
+
+            <br>
+            <label for="lname">Mô tả</label>
+            <input type="text" id="lname" name="MoTa" placeholder="Mô tả về phòng.." value="@Model.MoTa" readonly>
+            <label for="lname">Giá</label>
+            <input type="number" id="lname" name="Gia" placeholder="" required value="@Model.Gia" readonly>
+            <br>
+            <label for="lname">Ghi Chú</label>
+            <input type="text" id="lname" name="TenPhong" placeholder="" value="@Model.GhiChu" readonly>
+
+            <input type="submit" value="Xác nhận xóa Phòng">
+        }
+    </div>
+    <div class="divdiv">
+        @*<img id="target" class="img" src="#" alt="your image" style="width:300px;height:300px;float:right" />*@
+        <img src="@Model.HinhChinh" style="padding-bottom:600px" id="output" />
+
+    </div>
+
+
+</body>
+
+

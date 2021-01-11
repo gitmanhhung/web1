@@ -1,0 +1,9 @@
+﻿@model IEnumerable<HotelConection.KHACHSAN>
+<ul class="search__place--list">
+    @foreach (var item in Model)
+    {
+        <li class="search__place--list-item">
+            <a class="search__place--list-item-link" href="@Url.Action("index","KhachSan",new { id=item.MaKhachSan}) ">@item.TenKhachSan</a>
+        </li>
+    }
+</ul>

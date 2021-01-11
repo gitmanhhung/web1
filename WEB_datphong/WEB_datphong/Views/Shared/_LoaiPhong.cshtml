@@ -1,0 +1,20 @@
+﻿@model IEnumerable<HotelConection.LOAIPHONG>
+<div class="search__people">
+    <i class="fas fa-user-friends search__icon--people"></i>
+    <div class="search__people--wrap">
+        <p class="search__people--wrap-title">Loại Phòng</p>
+        <p class="search__people--wrap-content">1 phòng</p>
+    </div>
+    <i class="fas fa-sort-down search__icon--down"></i>
+
+    <ul class="search__people--list">
+        @foreach (var item in Model)
+        {
+            <li class="search__people--list-item">
+                <a class="search__people--list-item-link" href="@Url.Action("Index","LoaiPhong",new { id = item.MaLoaiPhong })">@item.TenLoaiPhong</a>
+            </li>
+        }
+
+    </ul>
+</div>
+

@@ -1,0 +1,68 @@
+﻿@model HotelConection.PHONG
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="wrap__layout">
+    <div style="width:70%;text-align:center">
+        @*<a href="@Url.Action("Details",new {id=item.MaPhong})">*@
+        <div class=" detail">
+            <div style="padding-left:29px">
+                <img style="width:200px;border:3px solid gray" src="@Model.HinhChinh" alt="" class="wrap__layout--img " />
+            </div>
+            <div style="padding-left10px">
+                <img style="width:200px;border:3px solid gray" src="@Model.Hinh1" alt="" class="wrap__layout--img " />
+            </div>
+            <div style="padding-left10px">
+                <img style="width:200px;border:3px solid gray" src="@Model.Hinh2" alt="" class="wrap__layout--img " />
+            </div>
+            <div style="padding-left:59px">
+                <p style="font-size:15px"><b>Chi tiết phòng:</b>@Model.MoTa</p>
+            </div>
+        </div>
+        <h2 class="wrap__layout--name">@Model.TenPhong</h2>
+        @*<h3 class="wrap__layout--place">@item.</h3>*@
+        <div class="wrap__layout--rating">
+            <i class="fas fa-star wrap__layout--rating-icon"></i>
+            <i class="fas fa-star wrap__layout--rating-icon"></i>
+            <i class="fas fa-star wrap__layout--rating-icon"></i>
+            <i class="fas fa-star wrap__layout--rating-icon"></i>
+            <i class="fas fa-star wrap__layout--rating-icon"></i>
+        </div>
+        <div style="padding-left: 433px" class="wrap__layout--more">
+            <i class="fas fa-user-friends wrap__layout--more-icon"></i>
+            <p class="wrap__layout--more-p"><b>Số lần được đặt</b>@Model.SoLuongDaDat</p>
+        </div>
+        <p class="wrap__layout--evaluate">
+            <b>Lượt Xem</b> @Model.LuotView
+        </p>
+        <div class="wrap__layout--vnd">
+            @*<p class="wrap__layout--discount">GIẢM GIÁ 30%</p>*@
+            @*<p class="wrap__layout--cost">2.9 đ</p>*@
+            <p class="wrap__layout--price">@Model.Gia VNĐ</p>
+        </div>
+        </a>
+        @if (User.Identity.IsAuthenticated)
+        {
+            using (Html.BeginForm("Them", "GioHang", FormMethod.Post))
+            {
+                <input type="hidden" id="fname" name="MaPhong" value="@Model.MaPhong">
+                <input type="hidden" id="fname" name="TenPhong" value="@Model.TenPhong">
+                <input type="hidden" id="fname" name="Gia" value="@Model.Gia">
+                <b>Đặt ngày: </b>
+                <input style="width:160px;height:60px" type="datetime-local" id="fname" name="NgayDat" >
+                
+                <b>Số ngày : </b>
+                <input  style="width:60px;height:60px;font-size:25px" type="number" id="fname" name="SoNgay" value="1" min="1" max="99">
+
+                <input class="wrap__layout--btn" type="submit" value="ĐẶT PHÒNG">
+                
+            }
+        }
+        else {
+        <h1 style="color:red">Vui lòng đăng nhập để đặt phòng</h1>
+                }
+
+    </div>
+</div>
+

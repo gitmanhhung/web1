@@ -1,0 +1,375 @@
+﻿
+@{
+    ViewBag.Title = "_MainLayout";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="~/Asset/slick-1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="~/Asset/slick-1.8.1//slick/slick.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap"
+          rel="stylesheet" />
+    <link rel="stylesheet"
+          href="~/Asset/font/fontawesome-free-5.14.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="~/Asset/css/TrangChu.css" />
+    <link rel="stylesheet" href="~/Asset/base.css" />
+</head>
+
+<body>
+    <div class="header">
+        <div class="header__slick">
+            <button type="button" class="slick-prev"></button>
+            <div class="header__slick--item">
+                <img src="~/Asset/Image/banner1.jpg"
+                     alt=""
+                     class="header__slick--item-img" />
+            </div>
+            <div class="header__slick--item">
+                <img src="~/Asset/Image/banner2.jpg"
+                     alt=""
+                     class="header__slick--item-img" />
+            </div>
+            <div class="header__slick--item">
+                <img src="~/Asset/Image/banner3.jpg"
+                     alt=""
+                     class="header__slick--item-img" />
+            </div>
+            <div class="header__slick--item">
+                <img src="~/Asset/Image/banner4.jpg"
+                     alt=""
+                     class="header__slick--item-img" />
+            </div>
+            <div class="header__slick--item">
+                <img src="~/Asset/Image/banner5.jpg"
+                     alt=""
+                     class="header__slick--item-img" />
+            </div>
+            <div class="header__slick--item">
+                <img src="~/Asset/Image/banner7.jpg"
+                     alt=""
+                     class="header__slick--item-img" />
+            </div>
+            <button type="button" class="slick-next"></button>
+        </div>
+        <div class="header__menu">
+            <div class="logo">
+                <a href="~/Home/Index"><img src="~/Asset/Image/logoDTU.png" alt="" /></a>
+            </div>
+            <div class="submenu">
+                <div class="submenu__1">
+                    <div class="submenu__1--left">
+                        <p class="submenu__1--left-hotline">Hotline:</p>
+                        <p href="" class="submenu__1--left-phone">093.5633219</p>
+                    </div>
+                    <div class="submenu__1--right">
+                        <div style="font-size: 15px;padding: 0px 57px;">
+                            @Html.Partial("_LoginPartial")
+                        </div>
+                        @*<button class="submenu__1--right-account submenu__1--right-account-login"
+                id="login">
+            Đăng nhập
+        </button>
+        <button class="submenu__1--right-account submenu__1--right-account-register"
+                id="register">
+            Đăng ký
+        </button>*@
+                    </div>
+                </div>
+                <div >
+                   
+                    
+                        <a style="padding-left:10px" href="~/Home/Index" class="submenu__2--link">TRANG CHỦ</a>
+                        <a href="~/Room/Index" class="submenu__2--link">PHÒNG</a>
+                        <a href="~/LienHe/LienHe.html" class="submenu__2--link">LIÊN HỆ</a>
+
+                    </div>
+                <div>
+                    <a style="float:right;padding: 10px 15px;border:1px solid;font-size:20px" href="../GioHang/Index" class="submenu__2--link">Phòng Đã Đặt</a>
+                </div>
+                </div>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="header__search">
+            <div class="search__place">
+                <p class="search__place--p">Khách Sạn</p>
+                <i class="fas fa-sort-down search__icon--down"></i>
+
+                @Html.Partial("_KhachSan", WEB_datphong.Models.BUS.KhachSanBUS.DanhSach())
+            </div>
+            @Html.Partial("_LoaiPhong", WEB_datphong.Models.BUS.LoaiPhongBUS.DanhSach())
+            <div class="search__price">
+                <p class="search__price--p">Giá</p>
+                <i class="fas fa-sort-down search__icon--down"></i>
+
+                <ul class="search__price--list">
+                    <li class="search__price--list-item">
+                        <a class="search__price--list-item-link" href="">Dưới 300.000</a>
+                    </li>
+                    <li class="search__price--list-item">
+                        <a class="search__price--list-item-link" href="">Dưới 500.000</a>
+                    </li>
+                    <li class="search__price--list-item">
+                        <a class="search__price--list-item-link" href="">Dưới 700.000</a>
+                    </li>
+                    <li class="search__price--list-item">
+                        <a class="search__price--list-item-link" href="">Dưới 1.000.000</a>
+                    </li>
+                    <li class="search__price--list-item">
+                        <a class="search__price--list-item-link" href="">Dưới 1.500.000</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="search__type">
+                <p class="search__type--p">Tiêu chuẩn</p>
+                <i class="fas fa-sort-down search__icon--down"></i>
+
+                <ul class="search__type--list">
+                    <li class="search__type--list-item">
+                        <a href="" class="search__type--list-item-link">Khách sạn 1 sao</a>
+                    </li>
+                    <li class="search__type--list-item">
+                        <a href="" class="search__type--list-item-link">Khách sạn 2 sao</a>
+                    </li>
+                    <li class="search__type--list-item">
+                        <a href="" class="search__type--list-item-link">Khách sạn 3 sao</a>
+                    </li>
+                    <li class="search__type--list-item">
+                        <a href="" class="search__type--list-item-link">Khách sạn 4 sao</a>
+                    </li>
+                    <li class="search__type--list-item">
+                        <a href="" class="search__type--list-item-link">Khách sạn 5 sao</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="search__datetime">
+                <input type="date" name="" id="search__datetime--come" />
+                <input type="date" name="" id="search__datetime--leave" />
+            </div>
+
+            <div class="search__input">
+                <i class="fas fa-search search__icon--search"></i>
+                <input class="search__input--input"
+                       type="text"
+                       placeholder="Nhập địa điểm du lịch hoặc tên khách sạn" />
+
+                <ul class="search__input--list">
+                    <li class="search__input--list-item">Đà Nẵng</li>
+                    <li class="search__input--list-item">Khách sạn Mường Thanh</li>
+                    <li class="search__input--list-item">Khách sạn Lotus Central</li>
+                    <li class="search__input--list-item">Khách sạn Đà Lạt</li>
+                </ul>
+            </div>
+            <button class="search__btn">Tìm kiếm</button>
+        </div>
+    </div>
+    @*@Html.Partial("newPhong", WEB_datphong.Models.BUS.HotelOnlineClass.newPhong())*@
+    @RenderBody();
+
+    <div class="footer">
+        <div class="grid">
+            <div class="grid__row">
+                <div class="grid__column">
+                    <h3 class="footer__heading">GIỚI THIỆU</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list--item">
+                            <a href="" class="footer__list--item-link">Giới thiệu về Trip</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <a href="" class="footer__list--item-link">Điều khoản sử dụng</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <a href="" class="footer__list--item-link">Quy chế hoạt động</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <a href="" class="footer__list--item-link">Chính sách bảo mật</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <a href="" class="footer__list--item-link">Blog du lịch</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <a href="" class="footer__list--item-link">Tuyển dụng CTV</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="grid__column">
+                    <h3 class="footer__heading">CHĂM SÓC KHÁCH HÀNG</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list--item">
+                            <a href="" class="footer__list--item-link">Trung tâm trợ giúp</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <a href="" class="footer__list--item-link">Hướng dẫn</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <a href="" class="footer__list--item-link">Trả & đổi phòng</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <a href="" class="footer__list--item-link">Chính sách hỗ trợ</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="grid__column">
+                    <h3 class="footer__heading">THANH TOÁN</h3>
+                    <ul class="footer__list"></ul>
+                </div>
+
+                <div class="grid__column">
+                    <h3 class="footer__heading">THEO DÕI CHÚNG TÔI</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list--item">
+                            <a href="">
+                                <i class="fab fa-facebook"></i>
+                                Facebook
+                            </a>
+                        </li>
+                        <li class="footer__list--item">
+                            <a href="">
+                                <i class="far fa-envelope"></i>
+                                Gmail
+                            </a>
+                        </li>
+                        <li class="footer__list--item">
+                            <a href="">
+                                <i class="fab fa-instagram"></i>
+                                Instagram
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="grid__column">
+                    <h3 class="footer__heading">Tải ngay ứng dụng</h3>
+                    <div class="footer__download">
+                        <img src="https://img.tickid.vn/photos/qrcode_base64/aHR0cDovL2h5cGVydXJsLmNvL215b2h1aQ"
+                             alt=""
+                             class="footer__download--qr" />
+                        <div class="footer__download--apps">
+                            <a class="footer__download--apps-link" href="">
+                                <img src="https://statics.vntrip.vn/images/logo/appStore.png"
+                                     alt=""
+                                     class="footer__download--apps-icon" />
+                            </a>
+                            <a class="footer__download--apps-link" href="">
+                                <img src="https://statics.vntrip.vn/images/logo/googlePlay.png"
+                                     alt=""
+                                     class="footer__download--apps-icon" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal__login" id="Modal-login">
+        <div class="modal__container">
+            <div class="modal__form">
+                <div class="modal__form--heading">
+                    <h3 class="modal__form--heading-h3">Đăng nhập</h3>
+                    <span class="modal__form--heading-close" id="close-login">&times;</span>
+                </div>
+                <div class="modal__form--content">
+                    <input class="modal__form--content-input modal__form--content-input1"
+                           type="text"
+                           placeholder="Email" />
+                    <div class="modal__form--content-input-pass">
+                        <input class="modal__form--content-input"
+                               type="password"
+                               placeholder="Mật khẩu" id="show-pass-login" />
+                        <i class="fas fa-eye-slash modal__form--content-showpass" id="icon-eye-login"></i>
+                    </div>
+                    <p class="modal__form--content-forget">Quên mật khẩu</p>
+                    <button class="modal__form--content-btn" type="submit">
+                        ĐĂNG NHẬP
+                    </button>
+                    <div class="modal__form--content-or">
+                        <span class="modal__form--content-or-span"></span>
+                        <p class="modal__form--content-or-p">Hoặc</p>
+                        <span class="modal__form--content-or-span"></span>
+                    </div>
+                    <div class="modal__form--content-link">
+                        <i class="fab fa-facebook-square modal__form--content-link-iconFB"></i>
+                        <p class="modal__form--content-link-p">Đăng nhập bằng Facebook</p>
+                    </div>
+                    <div class="modal__form--content-link">
+                        <img class="modal__form--content-link-iconGG"
+                             src="https://i.pinimg.com/originals/74/65/f3/7465f30319191e2729668875e7a557f2.png"
+                             alt="" />
+                        <p class="modal__form--content-link-p">Đăng nhập bằng Google</p>
+                    </div>
+                </div>
+                <div class="modal__form--footer modal__form--footer-login">
+                    <p class="modal__form--footer-p">Chưa có tài khoản?</p>
+                    <p class="modal__form--footer-p1" id="form__login-link-to-register">Đăng ký</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal__register" id="Modal-register">
+        <div class="modal__container">
+            <div class="modal__form">
+                <div class="modal__form--heading">
+                    <h3 class="modal__form--heading-h3">Đăng ký</h3>
+                    <span class="modal__form--heading-close" id="close-register">&times;</span>
+                </div>
+                <div class="modal__form--content">
+                    <input class="modal__form--content-input modal__form--content-input1"
+                           type="text"
+                           placeholder="Email" />
+                    <div class="modal__form--content-input-pass modal__form--content-input-pass-register">
+                        <input class="modal__form--content-input"
+                               type="password"
+                               placeholder="Mật khẩu" id="show-pass-register1" />
+                        <i class="fas fa-eye-slash modal__form--content-showpass" id="icon-eye-register1"></i>
+                    </div>
+                    <div class="modal__form--content-input-pass modal__form--content-input-pass-register">
+                        <input class="modal__form--content-input"
+                               type="password"
+                               placeholder="Nhập lại mật khẩu" id="show-pass-register2" />
+                        <i class="fas fa-eye-slash modal__form--content-showpass" id="icon-eye-register2"></i>
+                    </div>
+                    <button class="modal__form--content-btn" type="submit">
+                        ĐĂNG KÝ
+                    </button>
+                    <div class="modal__form--footer modal__form--footer-register">
+                        <div class="modal__form--footer-wrap">
+                            <p class="modal__form--footer-p">Bạn đã có tài khoản?</p>
+                            <p class="modal__form--footer-p1" id="form__register-link-to-login">Đăng nhập</p>
+                        </div>
+                        <p class="modal__form--footer-p modal__form--footer-p-register">
+                            Tiếp tục nghĩa là bạn đồng ý với các <span class="modal__form--footer-span">Điều khoản và điều kiện,</span>
+                            cũng như các <span class="modal__form--footer-span">Chính sách bảo mật</span> của TRIP.
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript"
+            src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript"
+            src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+    <script src="~/Asset/slick-1.8.1/slick//slick.min.js"></script>
+    <script src="~/Asset/css/TrangChu.js"></script>
+    <script src="~/Asset/base.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+
+
+

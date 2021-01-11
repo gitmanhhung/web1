@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_MainLayoutAdmin.cshtml";
+}
+
+<style>
+    input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+    .divdiv {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        width: 70%;
+        margin: auto;
+    }
+</style>
+<body>
+
+    <h1 style="padding:20px">Thêm Loại Phòng</h1>
+
+    <div class="divdiv">
+        @using (Html.BeginForm("Create", "LoaiPhongAdmin", FormMethod.Post))
+        {
+
+            <label for="fname">Mã Loại Phòng</label>
+            <input type="text" id="fname" name="MaLoaiPhong" placeholder=" Nhập mã.." required>
+
+            <label for="lname">Tên Loại Phòng</label>
+            <input type="text" id="lname" name="TenLoaiPhong" placeholder="Loại Phòng.." required>
+
+            <label for="country">Tình Trạng</label>
+            <select style="width:20%" id="country" name="TinhTrang" required>
+                <option value="0">Chưa khóa</option>
+                <option value="1">Đã khóa</option>
+            </select>
+
+
+            <input type="submit" value="Thêm Loại Phòng">
+        }
+    </div>
+
+</body>
+
+
+

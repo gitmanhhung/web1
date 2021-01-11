@@ -1,0 +1,68 @@
+﻿@model IEnumerable<HotelConection.PHONG>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_MainLayoutAdmin.cshtml";
+}
+
+<head>
+    <style>
+        ih, td {
+            text-align: center;
+        }
+
+        #customers {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 70%;
+            margin: auto;
+        }
+
+            #customers td, #customers th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #customers tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            #customers tr:hover {
+                background-color: #ddd;
+            }
+
+            #customers th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #4CAF50;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+    <h1 style="padding:20px">Quản Lí Phòng</h1>
+    <table id="customers">
+        <tr>
+            <th>Mã Phòng</th>
+            <th>Tên Phòng</th>
+            <th>Hình Ảnh</th>
+            <th>Tình Trạng</th>
+            <th style="text-align:center" colspan="2"><a href="@Url.Action("Create","PhongAdmin")"><i class="fas fa-plus-circle"></i></a></th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaPhong</td>
+                <td>@item.TenPhong</td>
+                <td><img style="width:45px;height:45px" src="@item.HinhChinh" alt="Alternate Text" /></td>
+                <td>@item.TinhTrang</td>
+                <td><a href="@Url.Action("Edit","PhongAdmin",new { id=item.MaPhong})"><i class="fas fa-edit"></i></a></td>
+                <td><a href="@Url.Action("Delete","PhongAdmin",new { id=item.MaPhong})"><i class="fas fa-trash-alt"></i></a></td>
+
+            </tr>
+        }
+
+    </table>
+
+</body>
+

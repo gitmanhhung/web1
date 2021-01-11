@@ -1,0 +1,645 @@
+
+:root{
+    --white-color: #fff;
+    --black-color:#000;
+    --text-color:#333;
+    --primary-color: #5392f9;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+body{
+    background-color: #fafafa;
+}
+
+html{
+    font-size: 62.5%;  
+    line-height: 1.6rem;  
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+
+.grid{
+    width: 1400px;
+    max-width: 100%;
+    margin: 0 auto;
+} 
+
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -6px;
+}
+
+.grid__column{
+    padding: 0 6px;
+    width: 20%;
+}
+
+
+.header{
+    width: 100vw;
+    height: 500px;
+    background: url(../Image/banner4.jpg) no-repeat center / cover;
+    position: relative;
+}
+/* Header Menu */
+.header__menu{
+    height: 130px;
+    width: 100%;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logo{
+    width: 300px;
+}
+
+.logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.submenu{
+    flex: 1;
+    border-radius: 4px;
+}
+
+.submenu__1{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: 50%;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.submenu__1--left{
+    display: flex;
+    align-items: center;
+}
+
+.submenu__1--left-hotline{
+    font-size: 1.6rem;
+    color: #35b9dd;
+    line-height: 1.6rem;
+    margin-right: 4px;
+    font-weight: 700;
+}
+
+.submenu__1--left-phone{
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.submenu__1--right{
+    display: flex;
+    align-items: center;
+}
+
+.submenu__1--right-account{
+    color: var(--primary-color);
+    background-color: var(--white-color);
+    margin: 0 16px;
+    height: 37px;
+    width: 120px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+}
+
+.submenu__1--right-account-register{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.submenu__2{
+    width: 80%;
+    height: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.submenu__2--link{
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 1.4rem;
+    margin-right: 50px;
+    font-weight: 500;
+}
+
+/* Header title */
+.header__title{
+    margin-top: 140px;
+    background-color: var(--white-color);
+    width: 500px;
+    height: 140px;
+    border-radius: 4px;
+    box-shadow: 0 3px 3px #ccc;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header__title--h1{
+    color: var(--primary-color);
+    font-size: 3rem;
+    line-height: 3rem;
+    margin: 0 auto;
+}
+
+
+/* Body Cam kết */
+
+.body__flight{
+    margin-top: 100px;
+}
+
+.body1__h1{
+    margin: 20px auto 30px;
+    font-size: 2.2rem;
+    color: #195688;
+    text-align: center;
+}
+
+.body1__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.body1__list--item{
+    flex-basis: 30%;
+    display: flex;
+    align-items: center;
+    margin: 12px;
+    cursor: pointer;
+}
+
+.body1__list--item-img{
+    margin-right: 8px;
+}
+
+.body1__list--item-p{
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+
+/* Body download */
+.download{
+    background: url(https://statics.vntrip.vn/images/appBox-bg.jpg) no-repeat center / cover;
+    margin-bottom: 40px;
+    padding-top: 40px;
+}
+
+.wrap__download{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.download__mobile{
+    height: 442px;
+    width: 270px;
+}
+
+.download__mobile img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.download__content{
+    width: 60%;
+}
+
+.download__content--h1{
+    font-size: 4rem;
+    line-height: 5rem;
+}   
+
+.download__content--p{
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+
+.download__content--logo-appstore,
+.download__content--logo-googleplay{
+    height: 55px;
+    width: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.download__content--logo-appstore{
+    margin-right: 40px;
+}
+
+
+/* Body booking */
+.booking{
+    background: url(http://bookinghotel.mynukeviet.com/themes/hotel01/images/contactf.jpg) no-repeat center / cover;
+    padding: 40px 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 3px 3px #ccc;
+}
+
+.booking__form{
+    background-color: var(--white-color);
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 1px 3px 3px #ccc;
+    border-radius: 6px;
+    padding-bottom: 40px;
+}
+.booking__form--h1{
+    color: #195688;
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+    padding: 30px 0 20px;
+}
+
+.booking__form--p{
+    color: #195688;
+    font-size: 1.8rem;
+    margin: 10px 0 4px 30px;
+}
+
+.booking__form--input{
+    font-size: 1.4rem;
+    height: 34px;
+    width: 90%;
+    padding-left: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #ccc;
+    margin: 10px 0 10px 30px;
+}
+
+.booking__form--input:hover{
+    border-color: var(--primary-color);
+}
+
+.input__NoiDung{
+    height: 60px;
+    padding-bottom: 20px;
+}
+
+.booking__form--checkbox{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+    padding-left: 12px;
+}
+
+.booking__form--checkbox input{
+    height: 15px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.booking__form--checkbox p{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.booking__form--btn{
+    display: flex;
+}
+
+.booking__form--btn button{
+    font-size: 1.8rem;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    outline: none;
+    border: none;
+    margin: 0 auto;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 30px;
+    width: 150px;
+}
+
+
+/* Body footer */
+.footer{
+    border-top: 4px solid var(--primary-color);
+}
+
+.footer__list{
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer__heading{
+    color: #757575;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 18px;
+}
+
+.footer__list--item{
+    margin: 12px 0;
+}
+
+.footer__list--item a{
+    display: block;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #757575;
+}
+
+.footer__list--item a:hover{
+    color: var(--primary-color);
+}
+
+.footer__list--item a i{
+    font-size: 1.4rem;
+    margin-right: 4px;
+    color: var(--text-color);
+}
+
+.footer__download{
+    display: flex;
+}
+
+.footer__download--qr{
+    max-height: 75px;
+    max-width: 75px;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+.footer__download--apps-link{
+    text-decoration: none;
+    color: transparent;
+}
+
+.footer__download--apps{
+    height: 75px;
+    margin-left: 12px;
+}
+
+.footer__download--apps-icon{
+    max-width: 75px;
+    height: 50%;
+    object-fit: contain;
+}
+
+
+/* Modal Login/Register */
+@keyframes FadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    animation: FadeIn linear 0.1s;
+}
+
+.modal__login{
+    display: none;
+}
+
+.modal__register{
+    display: none;
+}
+
+.modal__container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__form{
+    background-color: var(--white-color);
+    width: 450px;
+    margin: 120px auto 0;
+    border-radius: 4px;
+}
+
+.modal__form--heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+}
+
+.modal__form--heading-h3{
+    font-size: 2rem;
+    color: var(--text-color);  
+    padding-left: 12px; 
+}
+
+.modal__form--heading-close{
+    font-size: 2.6rem;
+    padding-right: 12px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.modal__form--content{
+    margin: 20px 12px 10px;
+}
+
+.modal__form--content-input{
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    font-size: 1.5rem;
+    height: 40px;
+    border-radius: 4px;
+    outline: 0;
+    /* border: 1px solid #ccc; */
+    padding-left: 12px;
+    border: none;
+}
+
+.modal__form--content-input1{
+    border: 1px solid #ccc;
+}
+
+
+.modal__form--content-input-pass{
+    display: flex;
+    height: 42px;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.modal__form--content-input-pass-register{
+    margin-bottom: 10px;
+}
+
+.modal__form--content-showpass{
+    font-size: 1.5rem;
+    position: relative;
+    right: 10px;
+}
+
+.modal__form--content-showpass:hover{
+    color: #bbb;
+}
+
+.modal__form--content-input::placeholder{
+    color: #ccc;
+    font-weight: 400;
+}
+
+.modal__form--content-input:hover{
+    border-color: var(--primary-color);
+}
+
+.modal__form--content-input-pass:hover{
+    border-color: var(--primary-color);
+}
+
+.modal__form--content-forget{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    width: fit-content;
+}
+
+.modal__form--content-btn{
+    width: 100%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    height: 42px;
+    outline: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.modal__form--content-btn:hover{
+    opacity: 0.8;
+}
+
+.modal__form--content-or{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+}
+
+.modal__form--content-or-span{
+    width: 180px;
+    height: 1px;
+    border-top: 1px solid #ccc;
+}
+
+.modal__form--content-or-p{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.modal__form--content-link{
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    height: 42px;
+    border-radius: 4px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.modal__form--content-link-iconFB{
+    font-size: 2rem;
+    color: #0269e3;
+    margin-left: auto;
+    margin-right: 8px;
+}
+
+.modal__form--content-link-iconGG{
+    height: 20px;
+    width: 17.5px;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: 8px;
+}
+
+.modal__form--content-link-p{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-right: auto;
+}
+
+.modal__form--footer-login{
+    display: flex;
+    margin: 0 12px;
+}
+
+.modal__form--footer-register{
+    padding: 8px 0;
+}
+
+.modal__form--footer-p{
+    font-size: 1.5rem;
+    margin-right: 4px;
+    color: var(--text-color);
+}
+
+.modal__form--footer-p-register{
+    margin-top: 0;
+}
+
+.modal__form--footer-p1{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.modal__form--content-forget:hover, .modal__form--footer-p1:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.modal__form--footer-wrap{
+    display: flex;
+    height: 42px;
+}
+
+.modal__form--footer-span{
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.modal__form--footer-span:hover{
+    text-decoration: underline;
+}
