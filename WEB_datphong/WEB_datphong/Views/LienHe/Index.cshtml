@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+
+}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Liên hệ</title>
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap"
+              rel="stylesheet" />
+        <link rel="stylesheet"
+              href="/font/fontawesome-free-5.14.0-web/css/all.min.css" />
+        <link rel="stylesheet" href="~/Asset/css/LienHe.css" />
+        <link rel="stylesheet" href="~/Asset/base.css" />
+    </head>
+<div class="grid">
+    <div class="form">
+        <div class="form__content">
+            <p>
+                Để không ngừng nâng cao chất lượng dịch vụ và đáp ứng tốt hơn nữa các yêu cầu của Quý khách,
+                chúng tôi mong muốn nhận được các thông tin phản hồi. Nếu Quý khách có bất kỳ thắc mắc hoặc đóng góp nào,
+                xin vui lòng liên hệ với chúng tôi theo thông tin dưới đây.
+                Chúng tôi sẽ phản hồi lại Quý khách trong thời gian sớm nhất.
+            </p>
+        </div>
+        <div class="form__container">
+            
+            @using (Html.BeginForm("GuiLienHe", "LienHe", FormMethod.Post))
+            {
+            <div class="form__contact1">
+                <p class="form__contact1--p">Tên của bạn:</p>
+
+                <input type="text" name="HoTen" class="form__contact1--input">
+                <p class="form__contact1--p">Điện thoại:</p>
+                <input type="text" name="Sdt" class="form__contact1--input">
+                <p class="form__contact1--p">Email:</p>
+                <input type="text" name="Email" class="form__contact1--input">
+                <p class="form__contact1--p">Nội dung:</p>
+                <input type="text" name="NoiDung" class="form__contact1--input form__contact1--input-ND">
+                <input onclick="danhgia()" class="wrap__layout--btn" type="submit" value="Gửi liên hệ">
+            </div>
+            }
+            <div class="form__contact2">
+                <p class="form__contact2--p">Nếu có bất kỳ thắc mắc nào, vui lòng liên hệ với tư vấn viên TRIP theo</p>
+                <div class="form__contact2--div">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>093.5633219</p>
+                </div>
+                <div class="form__contact2--div">
+                    <i class="far fa-envelope"></i>
+                    <p>DTUHotel@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Asset/base.js"></script>
+<script type="text/javascript">
+    function danhgia() {
+        alert("gửi liên hệ thành công!");
+    }
+</script>

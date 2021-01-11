@@ -1,0 +1,108 @@
+
+
+/* Grid liên hệ */
+.form{
+    margin: 50px 100px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 3px 3px #ccc;
+    background-color: var(--white-color);
+    border-radius: 4px;
+    padding: 20px 0 40px;
+}
+
+.form__content{
+    border: 1px solid #ccc;
+    margin: 20px 40px;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px #ccc;
+}
+
+.form__content p{
+    font-size: 1.6rem;
+    padding: 0 20px;
+    color: var(--text-color);
+    line-height: 1.6rem;
+}
+
+.form__container{
+    display: flex;
+    padding: 0 40px;
+    justify-content: space-between;
+}
+
+.form__contact1{
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px #ccc;
+    width: fit-content;
+    padding: 0 20px;
+    margin-right: 20px;
+}
+
+.form__contact2{
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px #ccc;
+    height: fit-content;
+    width: fit-content;
+    padding: 0 20px;
+    font-size: 1.4rem;
+}
+
+.form__contact1--p{
+    font-size: 1.4rem;
+    margin: 16px 0 8px;
+}
+
+.form__contact1--input{
+    font-size: 1.4rem;
+    height: 32px;
+    width: 650px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding-left: 8pxid;
+}
+
+.form__contact1--input:hover{
+    border-color: var(--primary-color);
+}
+
+.form__contact1--input-ND{
+    height: 44px;
+}
+
+.form__contact1--btn{
+    display: block;
+    margin: 20px auto;
+    font-size: 1.6rem;
+    height: 30px;
+    width: 120px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+}
+
+.form__contact1--btn:hover{
+    opacity: 0.9;
+}
+
+.form__contact2--div{
+    display: flex;
+    align-items: center;
+}
+
+.form__contact2--div i{
+    font-size: 1.6rem;
+    margin-right: 12px;
+}
+
+.form__contact2 p{
+    margin: 8px 0;
+}
+
+
+

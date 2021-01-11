@@ -397,6 +397,54 @@ namespace HotelConection
 
     
 
+	[TableName("dbo.DANHG")]
+
+
+
+	[PrimaryKey("id")]
+
+
+
+
+	[ExplicitColumns]
+
+    public partial class DANHG : HotelConectionDB.Record<DANHG>  
+    {
+
+
+
+		[Column] public int id { get; set; }
+
+
+
+
+
+		[Column] public string HoTen { get; set; }
+
+
+
+
+
+		[Column] public int? Sdt { get; set; }
+
+
+
+
+
+		[Column] public string Email { get; set; }
+
+
+
+
+
+		[Column] public string NoiDung { get; set; }
+
+
+
+	}
+
+    
+
 	[TableName("dbo.GioHang")]
 
 
@@ -490,6 +538,54 @@ namespace HotelConection
 
 
 		[Column] public string TinhTrang { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.LIENHE")]
+
+
+
+	[PrimaryKey("idLienHe")]
+
+
+
+
+	[ExplicitColumns]
+
+    public partial class LIENHE : HotelConectionDB.Record<LIENHE>  
+    {
+
+
+
+		[Column] public int idLienHe { get; set; }
+
+
+
+
+
+		[Column] public string HoTen { get; set; }
+
+
+
+
+
+		[Column] public int? Sdt { get; set; }
+
+
+
+
+
+		[Column] public string Email { get; set; }
+
+
+
+
+
+		[Column] public string NoiDung { get; set; }
 
 
 

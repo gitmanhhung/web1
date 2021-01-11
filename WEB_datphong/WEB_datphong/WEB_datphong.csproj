@@ -169,13 +169,16 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\KhachSanAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LienHeAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoaiPhongAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\MainAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\PhongAdminController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DanhGiaController.cs" />
     <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KhachSanController.cs" />
+    <Compile Include="Controllers\LienHeController.cs" />
     <Compile Include="Controllers\LoaiPhongController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PayController.cs" />
@@ -184,9 +187,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\BUS\DanhGiaBUS.cs" />
     <Compile Include="Models\BUS\GioHangBUS.cs" />
     <Compile Include="Models\BUS\HotelOnlineClass.cs" />
     <Compile Include="Models\BUS\KhachSanBUS.cs" />
+    <Compile Include="Models\BUS\LienHeBUS.cs" />
     <Compile Include="Models\BUS\LoaiPhongBUS.cs" />
     <Compile Include="Models\Generated\Database.cs">
       <AutoGen>True</AutoGen>
@@ -589,6 +594,7 @@
     <Content Include="Areas\AssetAdmin\vendor\vector-map\jqvmap.css" />
     <Content Include="Asset\base.css" />
     <Content Include="Asset\base.js" />
+    <Content Include="Asset\css\LienHe.css" />
     <Content Include="Asset\css\TrangChu.css" />
     <Content Include="Asset\font\fontawesome-free-5.14.0-web\css\all.css" />
     <Content Include="Asset\font\fontawesome-free-5.14.0-web\css\all.min.css" />
@@ -2447,6 +2453,7 @@
     <Content Include="Areas\Admin\Views\PhongAdmin\Create.cshtml" />
     <Content Include="Areas\Admin\Views\PhongAdmin\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\PhongAdmin\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\LienHeAdmin\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2500,6 +2507,8 @@
     <Content Include="Views\KhachSan\Index.cshtml" />
     <Content Include="Views\LoaiPhong\Index.cshtml" />
     <Content Include="Views\GioHang\Index.cshtml" />
+    <Content Include="Views\LienHe\Index.cshtml" />
+    <Content Include="Views\DanhGia\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
