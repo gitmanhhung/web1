@@ -1,34 +1,32 @@
-﻿using HotelConection;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using System.Web.Security;
 using WEB_datphong.Models.BUS;
 
 namespace WEB_datphong.Areas.Admin.Controllers
 {
-    public class LienHeAdminController : Controller
+    public class DanhGiaAdminController : Controller
     {
-        // GET: Admin/LienHeAdmin
-        [Authorize(Roles = "Admin,Employee")] 
-      
+        // GET: Admin/DanhGiaAdmin
+        [Authorize(Roles = "Admin,Employee")]
+
         public ActionResult Index()
         {
-            var db = LienHeBUS.DanhSach();
+            var db = DanhGiaBUS.DanhSach();
             return View(db);
         }
         [HttpGet]
-        
-        public ActionResult xoalienhe(int idLienHe)
+
+        public ActionResult xoadanhgia(int id)
         {
             try
             {
-              
+
 
                 // TODO: Add delete logic here
-                LienHeBUS.xoalienhe(idLienHe);
+                DanhGiaBUS.xoadanhgia(id);
                 return RedirectToAction("Index");
             }
             catch

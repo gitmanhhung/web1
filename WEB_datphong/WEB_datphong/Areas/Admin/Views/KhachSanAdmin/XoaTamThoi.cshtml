@@ -40,15 +40,15 @@
 </style>
 <body>
 
-    <h1 style="padding:20px">Xóa Khách Sạn</h1>
+    <h1 style="padding:20px">Xóa Số Lượng</h1>
     <div class="divdiv">
         @using (Html.BeginForm("XoaTamThoi", "KhachSanAdmin", FormMethod.Post))
         {
 
-            <label for="fname">Mã khách sạn</label>
+            <label for="fname">Mã Số lượng</label>
             <input type="text" id="fname" name="MaKhachSan" placeholder=" Nhập mã.." required value="@Model.MaKhachSan" readonly>
 
-            <label for="lname">Tên khách sạn</label>
+            <label for="lname">Số Lượng</label>
             <input type="text" id="lname" name="TenKhachSan" placeholder="Khách sạn.." required value="@Model.TenKhachSan" readonly>
 
             <label for="country">Tình Trạng</label>

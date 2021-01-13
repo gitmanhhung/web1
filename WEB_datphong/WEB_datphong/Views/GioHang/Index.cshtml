@@ -12,7 +12,7 @@
 
 <div class="container" style="display:block">
     @{
-        String dsphong = "";
+       
         foreach (var item in Model)
         {
 
@@ -33,9 +33,9 @@
                         <h1>@item.TenPhong</h1>
 
                         <b>@item.MaPhong</b>
-                        <b>@item.TenPhong</b>
-
-
+                        <b id="">@item.TenPhong</b>
+                     
+                        
                     </div>
                     @using (Html.BeginForm("CapNhat", "GioHang", FormMethod.Post))
                     {
@@ -79,44 +79,46 @@
 <footer id="site-footer">
     <div class="container clearfix">
         <h1>Thành Tiền</h1>
-        <h1 style="float:right;background-color:grey"><a href="~/Room/Index">Tiếp tục đặt thêm phòng</a></h1>
+        <h1 style="float:right;background-color:grey"><a href="~/Room/Index">Tiếp tục đặt phòng</a></h1>
         <div class="left">
             <h2 class="subtotal">Tổng: <span>@ViewBag.TongTien</span></h2>
             <h3 class="tax">Giảm Giá: <span>0</span>%</h3>
 
         </div>
+        @using (Html.BeginForm("Index", "Pay", FormMethod.Post))
+        {
+    <div class="right">
 
-        <div class="right">
-
-            <h1 class="total">Thành Tiền: <span>@ViewBag.TongTien</span>đ</h1>
-            <a class="btn">Checkout</a>
-        </div>
-
+        <h1 class="total">Thành Tiền:  <span><input width="170px" type="type" name="TongTien" value="@ViewBag.TongTien" /></span></h1>
+        
+        <input class="btn" type="submit" name="name" value="Thanh Toán" />
+    </div>
+                    }
     </div>
 </footer>
 <style>
     body {
-        background: #eee;
+                    background: #eee;
         margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-    }
+                    padding: 0;
+                        overflow-x: hidden;
+                    }
 
     .clearfix {
-        content: "";
-        display: table;
-        clear: both;
+                    content: "";
+                    display: table;
+                    clear: both;
+                    }
+
+#site-header, #site-footer {
+                background: #fff;
     }
 
-    #site-header, #site-footer {
-        background: #fff;
+#site-header {
+                margin: 0 0 30px 0;
     }
 
-    #site-header {
-        margin: 0 0 30px 0;
-    }
-
-        #site-header h1 {
+#site-header h1 {
             font-size: 31px;
             font-weight: 300;
             padding: 40px 0;
@@ -124,7 +126,7 @@
             margin: 0;
         }
 
-    a {
+        a {
         color: #000;
         text-decoration: none;
         -webkit-transition: color .2s linear;
@@ -151,7 +153,7 @@
             -moz-transition: all .2s linear;
             -ms-transition: all .2s linear;
             -o-transition: all .2s linear;
-            transition: all .2s linear;
+        transition: all .2s linear;
         }
 
         #site-header h1:hover span.last-span, #site-header h1 span.is-open {
@@ -185,7 +187,7 @@
             -moz-transition: color .2s linear;
             -ms-transition: color .2s linear;
             -o-transition: color .2s linear;
-            transition: color .2s linear;
+        transition: color .2s linear;
         }
 
             #cart a:hover {
@@ -219,7 +221,7 @@
             background-color: #fff;
             border: 1px solid #ccc;
             border-style: none none solid none;
-            float: left;
+        float: left;
         }
 
         .product header {
@@ -233,12 +235,12 @@
         }
 
             .product header:hover img {
-                opacity: .7;
-            }
+            opacity: .7;
+        }
 
             .product header:hover h3 {
-                bottom: 73px;
-            }
+            bottom: 73px;
+        }
 
             .product header h3 {
                 background: #53b5aa;
@@ -256,7 +258,7 @@
                 -moz-transition: bottom .2s linear;
                 -ms-transition: bottom .2s linear;
                 -o-transition: bottom .2s linear;
-                transition: bottom .2s linear;
+        transition: bottom .2s linear;
             }
 
     .remove {
@@ -272,44 +274,44 @@
     }
 
     .product h1 {
-        color: #53b5aa;
+            color: #53b5aa;
         font-size: 25px;
-        font-weight: 300;
-        margin: 17px 0 20px 0;
-    }
+            font-weight: 300;
+            margin: 17px 0 20px 0;
+        }
 
     .product footer.content {
-        height: 50px;
-        margin: 6px 0 0 0;
-        padding: 0;
-    }
+            height: 50px;
+            margin: 6px 0 0 0;
+            padding: 0;
+        }
 
     .product footer .price {
-        background: #fcfcfc;
+            background: #fcfcfc;
         color: #000;
         float: right;
-        font-size: 15px;
-        font-weight: 300;
-        line-height: 49px;
-        margin: 0;
-        padding: 0 30px;
-    }
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 49px;
+            margin: 0;
+            padding: 0 30px;
+        }
 
     .product footer .full-price {
         background: #53b5aa;
         color: #fff;
         float: right;
-        font-size: 22px;
-        font-weight: 300;
-        line-height: 49px;
+            font-size: 22px;
+            font-weight: 300;
+            line-height: 49px;
         margin: 0;
         padding: 0 30px;
-        -webkit-transition: margin .15s linear;
-        -moz-transition: margin .15s linear;
-        -ms-transition: margin .15s linear;
-        -o-transition: margin .15s linear;
+            -webkit-transition: margin .15s linear;
+            -moz-transition: margin .15s linear;
+            -ms-transition: margin .15s linear;
+            -o-transition: margin .15s linear;
         transition: margin .15s linear;
-    }
+        }
 
     .qt, .qt-plus, .qt-minus {
         display: block;
@@ -363,7 +365,7 @@
             background: #fcfcfc;
             border: 1px solid #ccc;
             border-style: none none solid none;
-            font-size: 24px;
+        font-size: 24px;
             font-weight: 300;
             margin: 0 0 7px 0;
             padding: 14px 40px;
@@ -454,47 +456,48 @@
     }
 </style>
 <script type="text/javascript">
+
     var check = false;
 
     function changeVal(el) {
-        var qt = parseFloat(el.parent().children(".qt").html());
-        var price = parseFloat(el.parent().children(".price").html());
-        var eq = Math.round(price * qt * 100) / 100;
+            var qt = parseFloat(el.parent().children(".qt").html());
+            var price = parseFloat(el.parent().children(".price").html());
+            var eq = Math.round(price * qt * 100) / 100;
 
-        el.parent().children(".full-price").html(eq + "€");
+            el.parent().children(".full-price").html(eq + "€");
 
-        changeTotal();
-    }
+            changeTotal();
+        }
 
-    function changeTotal() {
+        function changeTotal() {
 
-        var price = 0;
+            var price = 0;
 
         $(".full-price").each(function (index) {
-            price += parseFloat($(".full-price").eq(index).html());
-        });
+                price += parseFloat($(".full-price").eq(index).html());
+            });
 
-        price = Math.round(price * 100) / 100;
-        var tax = Math.round(price * 0.05 * 100) / 100
-        var shipping = parseFloat($(".shipping span").html());
-        var fullPrice = Math.round((price + tax + shipping) * 100) / 100;
+            price = Math.round(price * 100) / 100;
+            var tax = Math.round(price * 0.05 * 100) / 100
+            var shipping = parseFloat($(".shipping span").html());
+            var fullPrice = Math.round((price + tax + shipping) * 100) / 100;
 
-        if (price == 0) {
-            fullPrice = 0;
-        }
+            if (price == 0) {
+                fullPrice = 0;
+            }
 
         $(".subtotal span").html(price);
         $(".tax span").html(tax);
         $(".total span").html(fullPrice);
-    }
+        }
 
     $(document).ready(function () {
 
         $(".remove").click(function () {
-            var el = $(this);
-            el.parent().parent().addClass("removed");
-            window.setTimeout(
-                function () {
+                var el = $(this);
+                el.parent().parent().addClass("removed");
+                window.setTimeout(
+                    function () {
                     el.parent().parent().slideUp('fast', function () {
                         el.parent().parent().remove();
                         if ($(".product").length == 0) {
@@ -507,36 +510,36 @@
                         changeTotal();
                     });
                 }, 200);
-        });
+            });
 
         $(".qt-plus").click(function () {
             $(this).parent().children(".qt").html(parseInt($(this).parent().children(".qt").html()) + 1);
 
             $(this).parent().children(".full-price").addClass("added");
 
-            var el = $(this);
-            window.setTimeout(function () { el.parent().children(".full-price").removeClass("added"); changeVal(el); }, 150);
-        });
+                var el = $(this);
+                window.setTimeout(function () { el.parent().children(".full-price").removeClass("added"); changeVal(el); }, 150);
+            });
 
         $(".qt-minus").click(function () {
 
-            child = $(this).parent().children(".qt");
+                child = $(this).parent().children(".qt");
 
-            if (parseInt(child.html()) > 1) {
-                child.html(parseInt(child.html()) - 1);
-            }
+                if (parseInt(child.html()) > 1) {
+                    child.html(parseInt(child.html()) - 1);
+                }
 
             $(this).parent().children(".full-price").addClass("minused");
 
-            var el = $(this);
-            window.setTimeout(function () { el.parent().children(".full-price").removeClass("minused"); changeVal(el); }, 150);
-        });
+                var el = $(this);
+                window.setTimeout(function () { el.parent().children(".full-price").removeClass("minused"); changeVal(el); }, 150);
+            });
 
-        window.setTimeout(function () { $(".is-open").removeClass("is-open") }, 1200);
+            window.setTimeout(function () { $(".is-open").removeClass("is-open") }, 1200);
 
         $(".btn").click(function () {
-            check = true;
+                check = true;
             $(".remove").click();
+            });
         });
-    });
 </script>

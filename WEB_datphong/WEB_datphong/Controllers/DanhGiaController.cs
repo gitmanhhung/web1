@@ -15,6 +15,7 @@ namespace WEB_datphong.Controllers
 
         public ActionResult Index()
         {
+            
             var db = DanhGiaBUS.DanhSach();
             return View(db);
         }

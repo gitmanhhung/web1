@@ -15,19 +15,21 @@ namespace WEB_datphong.Controllers
         public ActionResult Index()
          
         {
+           
             ViewBag.TongTien = GioHangBUS.TongTien(User.Identity.GetUserId());
             //ViewBag.chuoidatphong = GioHangBUS.chuoidatphong(User.Identity.GetUserId());
-
+         
             return View(GioHangBUS.DanhSach(User.Identity.GetUserId()));
+           
         }
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult Them(String maphong,String tenphong,DateTime ngaydat,int songay,int gia)
+        public ActionResult Them(String maphong,String tenphong,DateTime ngaydat,int songay,int gia,String tinhtrang)
         {
             try
             {
                 // TODO: Add insert logic here
-                GioHangBUS.Them(User.Identity.GetUserId(), maphong, tenphong, ngaydat, songay, gia);
+                GioHangBUS.Them(User.Identity.GetUserId(), maphong, tenphong, ngaydat, songay, gia,tinhtrang);
                 return RedirectToAction("Index");
             }
             catch
@@ -37,12 +39,12 @@ namespace WEB_datphong.Controllers
         }
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult CapNhat(String maphong, String tenphong, DateTime ngaydat, int songay, int gia)
+        public ActionResult CapNhat(String maphong, String tenphong, DateTime ngaydat, int songay, int gia,String tinhtrang)
         {
             try
             {
                 // TODO: Add insert logic here
-                GioHangBUS.CapNhat(User.Identity.GetUserId(), maphong, tenphong, ngaydat, songay, gia);
+                GioHangBUS.CapNhat(User.Identity.GetUserId(), maphong, tenphong, ngaydat, songay, gia,tinhtrang);
                 return RedirectToAction("Index");
             }
             catch
@@ -58,6 +60,21 @@ namespace WEB_datphong.Controllers
                 // TODO: Add insert logic here
                 GioHangBUS.Xoa(User.Identity.GetUserId(), maphong);
                 return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View("../Room/Index");
+            }
+        }
+        //update gio hang
+        [HttpGet]
+        public ActionResult update()
+        {
+            try
+            {
+                // TODO: Add insert logic here
+                GioHangBUS.update(User.Identity.GetUserId());
+                return RedirectToAction("Detail");
             }
             catch
             {

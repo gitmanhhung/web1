@@ -441,6 +441,12 @@ namespace HotelConection
 
 
 
+
+
+		[Column] public DateTime? NgayDanhGia { get; set; }
+
+
+
 	}
 
     
@@ -504,6 +510,12 @@ namespace HotelConection
 
 
 		[Column] public DateTime? NgayDat { get; set; }
+
+
+
+
+
+		[Column] public string TinhTrang { get; set; }
 
 
 
@@ -762,6 +774,78 @@ namespace HotelConection
 
 
 		[Column] public byte[] definition { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.THANHTOAN")]
+
+
+
+	[PrimaryKey("id")]
+
+
+
+
+	[ExplicitColumns]
+
+    public partial class THANHTOAN : HotelConectionDB.Record<THANHTOAN>  
+    {
+
+
+
+		[Column] public int id { get; set; }
+
+
+
+
+
+		[Column] public string MaTaiKhoan { get; set; }
+
+
+
+
+
+		[Column] public int? TongTien { get; set; }
+
+
+
+
+
+		[Column] public DateTime? NgayThanhToan { get; set; }
+
+
+
+
+
+		[Column] public string HoTen { get; set; }
+
+
+
+
+
+		[Column] public string DiaChi { get; set; }
+
+
+
+
+
+		[Column] public int? Sdt { get; set; }
+
+
+
+
+
+		[Column] public string Email { get; set; }
+
+
+
+
+
+		[Column] public string SoThe { get; set; }
 
 
 

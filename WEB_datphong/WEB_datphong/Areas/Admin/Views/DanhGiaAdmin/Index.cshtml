@@ -1,10 +1,9 @@
-﻿
-@model IEnumerable<HotelConection.KHACHSAN>
+﻿@model IEnumerable<HotelConection.DANHG>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_MainLayoutAdmin.cshtml";
 }
-
+    
 <head>
     <style>
         ih, td {
@@ -41,29 +40,34 @@
     </style>
 </head>
 <body>
-    <h1 style="padding:20px">Quản Lí Số Lượng Người</h1>
+    <h1 style="padding:20px">Quản Lí Đánh Giá</h1>
     <table id="customers">
         <tr>
-            <th>Mã Số Lượng</th>
-            <th>Số Lượng</th>
-            <th>Tình Trạng</th>
-            <th style="text-align:center" colspan="2"><a href="@Url.Action("Create","KhachSanAdmin")"><i class="fas fa-plus-circle"></i></a></th>
+            <th>Họ Tên</th>
+            <th>Số điện thoại</th>
+            <th>Email</th>
+            <th>Nội dung</th>
+
+            <th>Ngày Đánh Giá</th>
+            <th>Xóa</th>
+
         </tr>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>@item.MaKhachSan</td>
-                <td>@item.TenKhachSan</td>
-                <td>@item.TinhTrang</td>
-                <td><a href="@Url.Action("Edit","KhachSanAdmin",new { id=item.MaKhachSan})"><i class="fas fa-edit"></i></a></td>
-                <td><a href="@Url.Action("XoaTamThoi","KhachSanAdmin",new { id=item.MaKhachSan})"><i class="fas fa-trash-alt"></i></a></td>
+    <tr>
+        <td>@item.HoTen</td>
+        <td>@item.Sdt</td>
+        <td>@item.Email</td>
+        <td>@item.NoiDung</td>
+        <td>@item.NgayDanhGia</td>
+        <td><a href="@Url.Action("xoadanhgia","DanhGiaAdmin",new { id=item.id})"> <i class="fas fa-trash-alt"></i></a></td>
 
-            </tr>
+    </tr>
         }
 
     </table>
 
-</body>
 
+</body>
 
 

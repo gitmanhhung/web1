@@ -20,7 +20,8 @@
     <link rel="stylesheet" href="~/Areas/AssetAdmin/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="~/Areas/AssetAdmin/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="~/Areas/AssetAdmin/vendor/fonts/flag-icon-css/flag-icon.min.css">
-    <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
+    <title>Admin</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
 <body>
@@ -31,9 +32,9 @@
         <!-- ============================================================== -->
         <!-- navbar -->
         <!-- ============================================================== -->
-        <div class="dashboard-header">
+        @*<div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="index.html">Concept</a>
+                <a class="navbar-brand" href="index.html">Admin</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -142,7 +143,7 @@
                     </ul>
                 </div>
             </nav>
-        </div>
+        </div>*@
         <!-- ============================================================== -->
         <!-- end navbar -->
         <!-- ============================================================== -->
@@ -166,7 +167,7 @@
 
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("Index","KhachSanAdmin")"><i class="fa fa-fw fa-rocket"></i>Quản lí khách sạn</a>
+                                <a class="nav-link" href="@Url.Action("Index","KhachSanAdmin")"><i class="fa fa-fw fa-rocket"></i>Quản lí Số Người/Phòng</a>
 
                             </li>
                             <li class="nav-item">
@@ -178,7 +179,11 @@
 
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="@Url.Action("Index","LienHeAdmin")"><i class="fab fa-fw fa-wpforms"></i>Quản lí Liên Hệ</a>
+                                <a class="nav-link" href="@Url.Action("Index","LienHeAdmin")"><i class="fas fa-blender-phone"></i>Quản lí Liên Hệ</a>
+
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="@Url.Action("Index","DanhGiaAdmin")"><i class="fas fa-atlas"></i>Quản lí Đánh Giá</a>
 
                             </li>
 
@@ -204,13 +209,13 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                            Copyright © 2018 Concept. All rights reserved. Dashboard by <a href="https://colorlib.com/wp/">Colorlib</a>.
+                            @*Copyright © 2018 Concept. All rights reserved. Dashboard by <a href="https://colorlib.com/wp/">Colorlib</a>.*@
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                             <div class="text-md-right footer-links d-none d-sm-block">
-                                <a href="javascript: void(0);">About</a>
+                                @*<a href="javascript: void(0);">About</a>
                                 <a href="javascript: void(0);">Support</a>
-                                <a href="javascript: void(0);">Contact Us</a>
+                                <a href="javascript: void(0);">Contact Us</a>*@
                             </div>
                         </div>
                     </div>

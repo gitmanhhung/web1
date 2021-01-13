@@ -99,7 +99,7 @@
     <div class="grid">
         <div class="header__search">
             <div class="search__place">
-                <p class="search__place--p">Khách Sạn</p>
+                <p class="search__place--p">Số Người</p>
                 <i class="fas fa-sort-down search__icon--down"></i>
 
                 @Html.Partial("_KhachSan", WEB_datphong.Models.BUS.KhachSanBUS.DanhSach())
@@ -132,20 +132,15 @@
                 <i class="fas fa-sort-down search__icon--down"></i>
 
                 <ul class="search__type--list">
+                   
                     <li class="search__type--list-item">
-                        <a href="" class="search__type--list-item-link">Khách sạn 1 sao</a>
+                        <a href="" class="search__type--list-item-link">Phòng 3 sao</a>
                     </li>
                     <li class="search__type--list-item">
-                        <a href="" class="search__type--list-item-link">Khách sạn 2 sao</a>
+                        <a href="" class="search__type--list-item-link">Phòng 4 sao</a>
                     </li>
                     <li class="search__type--list-item">
-                        <a href="" class="search__type--list-item-link">Khách sạn 3 sao</a>
-                    </li>
-                    <li class="search__type--list-item">
-                        <a href="" class="search__type--list-item-link">Khách sạn 4 sao</a>
-                    </li>
-                    <li class="search__type--list-item">
-                        <a href="" class="search__type--list-item-link">Khách sạn 5 sao</a>
+                        <a href="" class="search__type--list-item-link">Phòng 5 sao</a>
                     </li>
                 </ul>
             </div>
@@ -160,12 +155,12 @@
                        type="text"
                        placeholder="Nhập địa điểm du lịch hoặc tên khách sạn" />
 
-                <ul class="search__input--list">
+                @*<ul class="search__input--list">
                     <li class="search__input--list-item">Đà Nẵng</li>
                     <li class="search__input--list-item">Khách sạn Mường Thanh</li>
                     <li class="search__input--list-item">Khách sạn Lotus Central</li>
                     <li class="search__input--list-item">Khách sạn Đà Lạt</li>
-                </ul>
+                </ul>*@
             </div>
             <button class="search__btn">Tìm kiếm</button>
         </div>

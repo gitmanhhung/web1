@@ -40,16 +40,16 @@
 </style>
 <body>
 
-    <h1 style="padding:20px">Thêm Khách Sạn</h1>
+    <h1 style="padding:20px">Thêm Số Lượng Người</h1>
 
     <div class="divdiv">
         @using (Html.BeginForm("Create", "KhachSanAdmin", FormMethod.Post))
         {
 
-            <label for="fname">Mã khách sạn</label>
+            <label for="fname">Mã Số Lượng</label>
             <input type="text" id="fname" name="MaKhachSan" placeholder=" Nhập mã.." required>
 
-            <label for="lname">Tên khách sạn</label>
+            <label for="lname">Số Lượng</label>
             <input type="text" id="lname" name="TenKhachSan" placeholder="Khách sạn.." required>
 
             <label for="country">Tình Trạng</label>
@@ -59,7 +59,7 @@
             </select>
 
 
-            <input type="submit" value="Thêm Khách Sạn">
+            <input type="submit" value="Thêm ">
         }
     </div>
 

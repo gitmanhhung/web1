@@ -7,39 +7,41 @@
 
 
     <div class="body">
-        <h1 class="body__h1">KHÁCH SẠN ĐỀ XUẤT</h1>
+        <h1 class="body__h1">PHÒNG ĐỀ XUẤT</h1>
         <div class="container__slick">
             @foreach (var item in Model)
             {
+            <a href="@Url.Action("Details","Room",new {id=item.MaPhong})">
                 <div class="wrap__slick" style="display:table">
                     <div class="wrap__layout">
-                        <a href="@Url.Action("Details","Room",new {id=item.MaPhong})">
-                            <img src="@item.HinhChinh" alt="" class="wrap__layout--img" />
-                            <h2 class="wrap__layout--name">@item.TenPhong</h2>
-                            @*<h3 class="wrap__layout--place">@item.</h3>*@
-                            <div class="wrap__layout--rating">
-                                <i class="fas fa-star wrap__layout--rating-icon"></i>
-                                <i class="fas fa-star wrap__layout--rating-icon"></i>
-                                <i class="fas fa-star wrap__layout--rating-icon"></i>
-                                <i class="fas fa-star wrap__layout--rating-icon"></i>
-                                <i class="fas fa-star wrap__layout--rating-icon"></i>
-                            </div>
-                            <div class="wrap__layout--more">
-                                <i class="fas fa-user-friends wrap__layout--more-icon"></i>
-                                <p class="wrap__layout--more-p"><b>Số lần được đặt</b>@item.SoLuongDaDat</p>
-                            </div>
-                            <p class="wrap__layout--evaluate">
-                                <b>Lượt Xem</b> @item.LuotView
-                            </p>
-                            <div class="wrap__layout--vnd">
-                                @*<p class="wrap__layout--discount">GIẢM GIÁ 30%</p>*@
-                                @*<p class="wrap__layout--cost">2.9 đ</p>*@
-                                <p class="wrap__layout--price">@item.Gia VNĐ</p>
-                            </div>
-                        </a>
+
+                        <img src="@item.HinhChinh" alt="" class="wrap__layout--img" />
+                        <h2 class="wrap__layout--name">@item.TenPhong</h2>
+                        @*<h3 class="wrap__layout--place">@item.</h3>*@
+                        <div class="wrap__layout--rating">
+                            <i class="fas fa-star wrap__layout--rating-icon"></i>
+                            <i class="fas fa-star wrap__layout--rating-icon"></i>
+                            <i class="fas fa-star wrap__layout--rating-icon"></i>
+                            <i class="fas fa-star wrap__layout--rating-icon"></i>
+                            <i class="fas fa-star wrap__layout--rating-icon"></i>
+                        </div>
+                        <div class="wrap__layout--more">
+                            <i class="fas fa-user-friends wrap__layout--more-icon"></i>
+                            <p class="wrap__layout--more-p"><b>Số lần được đặt</b>@item.SoLuongDaDat</p>
+                        </div>
+                        <p class="wrap__layout--evaluate">
+                            <b>Lượt Xem</b> @item.LuotView
+                        </p>
+                        <div class="wrap__layout--vnd">
+                            @*<p class="wrap__layout--discount">GIẢM GIÁ 30%</p>*@
+                            @*<p class="wrap__layout--cost">2.9 đ</p>*@
+                            <p class="wrap__layout--price">@item.Gia VNĐ</p>
+                        </div>
+
                     </div>
                     <button class="wrap__layout--btn">ĐẶT PHÒNG</button>
                 </div>
+            </a>
             }
         </div>
     </div>

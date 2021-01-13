@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WEB_datphong.Models.BUS;
 
 namespace WEB_datphong.Controllers
 {
@@ -10,7 +11,8 @@ namespace WEB_datphong.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var db = DanhGiaBUS.DanhSach();
+            return View(db);
         }
 
         public ActionResult About()

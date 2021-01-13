@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\DanhGiaAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\KhachSanAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\LienHeAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoaiPhongAdminController.cs" />
@@ -193,6 +194,7 @@
     <Compile Include="Models\BUS\KhachSanBUS.cs" />
     <Compile Include="Models\BUS\LienHeBUS.cs" />
     <Compile Include="Models\BUS\LoaiPhongBUS.cs" />
+    <Compile Include="Models\BUS\PayBUS.cs" />
     <Compile Include="Models\Generated\Database.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -2454,6 +2456,7 @@
     <Content Include="Areas\Admin\Views\PhongAdmin\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\PhongAdmin\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\LienHeAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\DanhGiaAdmin\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2509,12 +2512,13 @@
     <Content Include="Views\GioHang\Index.cshtml" />
     <Content Include="Views\LienHe\Index.cshtml" />
     <Content Include="Views\DanhGia\Index.cshtml" />
+    <Content Include="Views\Pay\Index.cshtml" />
+    <Content Include="Views\Pay\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Asset\img\" />
-    <Folder Include="Views\Pay\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
